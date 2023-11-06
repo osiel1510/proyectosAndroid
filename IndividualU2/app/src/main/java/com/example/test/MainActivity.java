@@ -254,6 +254,7 @@ public class MainActivity extends AppCompatActivity {
 
         int indice = Integer.valueOf(palabraActual2[2].toString()); // Obtener el índice de la palabra
         int indiceInicial = Integer.valueOf(palabraActual2[2].toString()); // Respaldar el índice
+
         Object[] word = palabraActual2; // Actualizar la variable word
 
         if (word[0].toString().trim().equals("If")) { // En caso de ser sentencia if
@@ -290,12 +291,13 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             } else {
+                System.out.println("if without blank");
                 if (words.get(1)[0].toString().trim().equals("Blank")) {
                     if (arregloPrincipal.get(posicionArregloActual).equals(" ")) {
                         ejecutarAction(words.subList(2, 4));
                     }
                 } else {
-                    if (arregloPrincipal.get(posicionArregloActual).equals(String.valueOf(words.get(1)[0].toString().trim().charAt(0)))) {
+                    if (arregloPrincipal.get(posicionArregloActual).equals(String.valueOf(words.get(1)[0].toString().trim().charAt(1)))) {
                         ejecutarAction(words.subList(2, 4));
                     }
                 }
